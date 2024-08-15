@@ -49,20 +49,36 @@
 &kp ESCAPE        &kp A   &kp S   &kp D          &kp F      &kp G               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C          &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                                   &kp LEFT_ALT   &kp ENTER  &kp LEFT_SHIFT      &backspace_delete  &kp SPACE  &kp RIGHT_ALT
-                                  &Win_Or_Shift  &mo 2      &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &mo 1      &Win_Or_Shift
+                                  &Win_Or_Shift  &mo 3      &kp LEFT_CONTROL    &kp RIGHT_SHIFT    &mo 2      &Win_Or_Shift
             >;
         };
 
-        layer_1 {
+        Gaming {
+            bindings = <
+&kp ESCAPE  &kp F2     &kp F3  &kp F4         &kp F5     &kp F6              &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE   &kp N1     &kp N2  &kp N3         &kp N4     &kp N5              &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp T       &kp TAB    &kp Q   &kp W          &kp E      &kp R               &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp G       &kp LSHFT  &kp A   &kp S          &kp D      &kp F               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp Z       &kp LCTRL  &kp X   &kp C          &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                               &kp LEFT_ALT   &kp SPACE  &kp LEFT_SHIFT      &backspace_delete  &kp ENTER  &kp RIGHT_ALT
+                               &Win_Or_Shift  &mo 3      &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &mo 2      &Win_Or_Shift
+            >;
+
+            label = "WASD Shifted";
+        };
+
+        Movement {
             bindings = <
 &bt BT_CLR       &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4    &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
 &rgb_ug RGB_TOG  &trans          &trans            &trans        &trans             &trans          &trans        &trans            &trans              &trans      &trans             &trans
 &trans           &trans          &trans            &trans        &trans             &trans          &trans        &trans            &trans              &trans      &trans             &trans
 &trans           &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT       &trans          &kp LEFT      &kp DOWN          &kp UP_ARROW        &kp RIGHT   &trans             &trans
 &trans           &trans          &trans            &trans        &trans             &trans          &kp HOME      &kp PAGE_DOWN     &kp PG_UP           &kp END     &trans             &trans
-                                                   &trans        &trans             &trans          &trans        &mo 3             &trans
+                                                   &trans        &trans             &trans          &trans        &mo 4             &trans
                                                    &trans        &kp K_APPLICATION  &trans          &trans        &trans            &trans
             >;
+
+            label = "Arrows and function keys";
         };
 
         layer_2 {
@@ -72,7 +88,7 @@
 &trans            &trans            &trans             &trans                &trans                 &trans       &trans           &kp NUMBER_7       &kp N8        &kp N9           &kp KP_PLUS   &trans
 &kp LEFT_SHIFT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &trans           &kp NUMBER_4       &kp N5        &kp NUMBER_6     &kp KP_ENTER  &trans
 &kp LEFT_CONTROL  &trans            &trans             &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS    &trans           &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3     &kp KP_ENTER  &trans
-                                                       &trans                &mo 3                  &trans       &kp RIGHT_SHIFT  &kp N0             &kp PERIOD
+                                                       &trans                &mo 4                  &trans       &kp RIGHT_SHIFT  &kp N0             &kp PERIOD
                                                        &trans                &trans                 &trans       &trans           &kp K_APPLICATION  &trans
             >;
         };
@@ -83,21 +99,9 @@
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &tog 4    &tog 0  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &tog 1    &trans  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&kp ESCAPE  &kp F2     &kp F3  &kp F4         &kp F5     &kp F6              &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
-&kp GRAVE   &kp N1     &kp N2  &kp N3         &kp N4     &kp N5              &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
-&kp T       &kp TAB    &kp Q   &kp W          &kp E      &kp R               &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
-&kp G       &kp LSHFT  &kp A   &kp S          &kp D      &kp F               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp Z       &kp LCTRL  &kp X   &kp C          &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                               &kp LEFT_ALT   &kp SPACE  &kp LEFT_SHIFT      &backspace_delete  &kp SPACE  &kp RIGHT_ALT
-                               &Win_Or_Shift  &mo 2      &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &mo 1      &Win_Or_Shift
             >;
         };
     };
