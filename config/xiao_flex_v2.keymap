@@ -83,7 +83,7 @@
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &to 4     &to 0   &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &tog 4    &tog 0  &trans  &trans  &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
