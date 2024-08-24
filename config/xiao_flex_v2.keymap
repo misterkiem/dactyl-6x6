@@ -95,11 +95,11 @@
 
         layer_3 {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &bootloader
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &tog 1    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &trans  &tog 1    &tog 1  &trans  &trans  &trans  &trans  &bootloader
                              &trans  &trans  &trans    &trans  &trans  &trans
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
