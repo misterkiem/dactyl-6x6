@@ -10,6 +10,28 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    behaviors {
+        Win_Or_Shift: Win_Or_Shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "WIN_OR_SHIFT";
+            bindings = <&kp LEFT_GUI>, <&kp LEFT_SHIFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+            keep-mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        backspace_delete: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -22,37 +44,65 @@
             // |    2   |  2  | f   | 6    | 4    | 1    |                    | 2    | 1     | w     | s    | n     |  a    |
 
             bindings = <
-&kp F1     &kp F2  &kp F3  &kp F4     &kp F5     &kp F6      &kp F7   &kp F8    &kp F9     &kp F10  &kp F11   &kp F12
-&kp ESC    &kp N1  &kp N2  &kp N3     &kp N4     &kp N5      &kp N6   &kp N7    &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB    &kp Q   &kp W   &kp E      &kp R      &kp T       &kp Y    &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&kp LSHFT  &kp A   &kp S   &kp D      &kp F      &kp G       &kp H    &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp GRAVE  &kp Z   &kp X   &kp C      &kp V      &kp B       &kp N    &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp BSLH
-                           &kp LSHFT  &kp SPACE  &kp BSPC    &kp DEL  &kp RET   &kp RGUI
-                           &kp LCTRL  &kp LALT   &mo 1       &mo 1    &kp RALT  &kp RCTRL
+&kp F1            &kp F2  &kp F3  &kp F4         &kp F5     &kp F6              &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE         &kp N1  &kp N2  &kp N3         &kp N4     &kp N5              &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp TAB           &kp Q   &kp W   &kp E          &kp R      &kp T               &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp ESCAPE        &kp A   &kp S   &kp D          &kp F      &kp G               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LEFT_CONTROL  &kp Z   &kp X   &kp C          &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                                  &kp LEFT_ALT   &kp ENTER  &kp LEFT_SHIFT      &backspace_delete  &kp SPACE  &kp RIGHT_ALT
+                                  &Win_Or_Shift  &mo 3      &kp LEFT_CONTROL    &kp RIGHT_SHIFT    &mo 2      &Win_Or_Shift
             >;
         };
 
-        layer_1 {
+        Gaming {
             bindings = <
-&bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &trans
-&rgb_ug RGB_TOG  &trans        &trans        &trans        &trans        &trans          &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans
-&kp F1           &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12
-&trans           &trans        &trans        &trans        &trans        &trans          &trans           &trans           &trans           &trans           &trans           &trans
-&trans           &trans        &trans        &trans        &trans        &trans          &trans           &trans           &trans           &trans           &trans           &trans
-                                             &trans        &trans        &bootloader     &trans           &trans           &trans
-                                             &trans        &trans        &trans          &trans           &trans           &trans
+&kp ESCAPE  &kp F2     &kp F3  &kp F4        &kp F5     &kp F6       &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE   &kp N1     &kp N2  &kp N3        &kp N4     &kp N5       &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp T       &kp TAB    &kp Q   &kp W         &kp E      &kp R        &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp G       &kp LSHFT  &kp A   &kp S         &kp D      &kp F        &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp Z       &kp LCTRL  &kp X   &kp C         &kp V      &kp B        &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                               &kp LEFT_ALT  &kp SPACE  &kp KP_N1    &backspace_delete  &kp ENTER  &kp RIGHT_ALT
+                               &kp KP_N4     &kp KP_N3  &kp KP_N2    &kp RIGHT_CONTROL  &mo 2      &Win_Or_Shift
+            >;
+
+            label = "WASD Shifted";
+        };
+
+        Movement {
+            bindings = <
+&bt BT_CLR       &bt BT_SEL 0    &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_REWIND  &kp C_PLAY_PAUSE  &kp C_FAST_FORWARD  &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&rgb_ug RGB_TOG  &trans          &trans            &trans        &trans        &trans          &trans        &trans            &trans              &trans      &trans             &trans
+&trans           &trans          &trans            &trans        &trans        &trans          &trans        &trans            &trans              &trans      &trans             &trans
+&trans           &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &trans          &kp LEFT      &kp DOWN          &kp UP_ARROW        &kp RIGHT   &trans             &trans
+&trans           &trans          &trans            &trans        &trans        &trans          &kp HOME      &kp PAGE_DOWN     &kp PG_UP           &kp END     &trans             &trans
+                                                   &trans        &trans        &trans          &trans        &trans            &mo 4
+                                                   &trans        &trans        &trans          &trans        &trans            &kp K_CONTEXT_MENU
+            >;
+
+            label = "Arrows and function keys";
+        };
+
+        Symbols {
+            bindings = <
+&trans            &trans            &trans             &trans                &trans                 &trans       &trans  &trans        &trans        &trans           &trans             &trans
+&trans            &trans            &trans             &trans                &trans                 &trans       &trans  &trans        &kp KP_SLASH  &kp KP_MULTIPLY  &backspace_delete  &trans
+&trans            &trans            &trans             &trans                &trans                 &trans       &trans  &kp NUMBER_7  &kp N8        &kp N9           &kp KP_MINUS       &trans
+&kp LEFT_SHIFT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6     &kp KP_PLUS        &trans
+&kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT            &trans
+                                                       &mo 4                 &trans                 &trans       &trans  &trans        &trans
+                                                       &kp K_CONTEXT_MENU    &trans                 &trans       &trans  &trans        &trans
             >;
         };
 
-        layer_2 {
+        layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans    &trans    &trans     &trans  &trans
-                        &trans  &trans  &trans    &bootloader  &trans    &trans
-                        &trans  &trans  &trans    &trans       &trans    &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &trans  &trans  &trans  &trans  &tog 1    &tog 1  &trans  &trans  &trans  &trans  &bootloader
+                             &trans  &trans  &trans    &trans  &trans  &trans
+                             &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
