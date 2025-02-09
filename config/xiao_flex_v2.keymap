@@ -56,13 +56,13 @@
 
         Gaming {
             bindings = <
-&kp ESCAPE  &kp F2     &kp F3  &kp F4        &kp F5     &kp F6       &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
-&kp GRAVE   &kp N1     &kp N2  &kp N3        &kp N4     &kp N5       &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
-&kp T       &kp TAB    &kp Q   &kp W         &kp E      &kp R        &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
-&kp G       &kp LSHFT  &kp A   &kp S         &kp D      &kp F        &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp Z       &kp LCTRL  &kp X   &kp C         &kp V      &kp B        &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                               &kp LEFT_ALT  &kp SPACE  &kp KP_N1    &backspace_delete  &kp ENTER  &kp RIGHT_ALT
-                               &kp KP_N4     &kp KP_N3  &kp KP_N2    &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
+&kp ESCAPE  &kp F2     &kp F3  &kp F4        &kp F5      &kp F6           &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE   &kp N1     &kp N2  &kp N3        &kp N4      &kp N5           &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp T       &kp TAB    &kp Q   &kp W         &kp E       &kp R            &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp G       &kp LSHFT  &kp A   &kp S         &kp D       &kp F            &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp Z       &kp LCTRL  &kp X   &kp C         &kp V       &kp B            &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                               &kp LEFT_ALT  &kp SPACE   &kp BACKSLASH    &backspace_delete  &kp ENTER  &kp RIGHT_ALT
+                               &kp COMMA     &kp PERIOD  &kp SLASH        &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
             >;
 
             label = "WASD Shifted";
@@ -71,13 +71,13 @@
         sc2 {
             label = "Non-WASD Shifted";
             bindings = <
-&kp ESCAPE  &kp F2  &kp F3  &kp F4        &kp F5     &kp F6              &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
-&kp GRAVE   &kp N1  &kp N2  &kp N3        &kp N4     &kp N5              &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
-&kp TAB     &kp Q   &kp W   &kp E         &kp R      &kp T               &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
-&kp N9      &kp A   &kp S   &kp D         &kp F      &kp G               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&kp N0      &kp Z   &kp X   &kp C         &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
-                            &kp NUMBER_6  &kp SPACE  &kp LEFT_SHIFT      &backspace_delete  &kp ENTER  &kp RIGHT_ALT
-                            &kp N8        &kp N7     &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
+&kp ESCAPE  &kp F2  &kp F3  &kp F4      &kp F5                &kp F6              &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE   &kp N1  &kp N2  &kp N3      &kp N4                &kp N5              &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp TAB     &kp Q   &kp W   &kp E       &kp R                 &kp T               &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp MINUS   &kp A   &kp S   &kp D       &kp F                 &kp G               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp COMMA   &kp Z   &kp X   &kp C       &kp V                 &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                            &kp PERIOD  &kp SPACE             &kp LEFT_SHIFT      &backspace_delete  &kp ENTER  &kp RIGHT_ALT
+                            &kp SLASH   &kp NON_US_BACKSLASH  &kp LEFT_CONTROL    &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
             >;
         };
 
