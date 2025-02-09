@@ -50,7 +50,7 @@
 &kp ESCAPE        &kp A   &kp S   &kp D          &kp F      &kp G               &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp LEFT_CONTROL  &kp Z   &kp X   &kp C          &kp V      &kp B               &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                                   &kp LEFT_ALT   &kp ENTER  &kp LEFT_SHIFT      &backspace_delete  &kp SPACE  &kp RIGHT_ALT
-                                  &Win_Or_Shift  &mo 3      &kp LEFT_CONTROL    &kp RIGHT_SHIFT    &mo 2      &Win_Or_Shift
+                                  &Win_Or_Shift  &mo 4      &kp LEFT_CONTROL    &kp RIGHT_SHIFT    &mo 3      &Win_Or_Shift
             >;
         };
 
@@ -62,10 +62,23 @@
 &kp G       &kp LSHFT  &kp A   &kp S         &kp D      &kp F        &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
 &kp Z       &kp LCTRL  &kp X   &kp C         &kp V      &kp B        &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
                                &kp LEFT_ALT  &kp SPACE  &kp KP_N1    &backspace_delete  &kp ENTER  &kp RIGHT_ALT
-                               &kp KP_N4     &kp KP_N3  &kp KP_N2    &kp RIGHT_CONTROL  &mo 2      &Win_Or_Shift
+                               &kp KP_N4     &kp KP_N3  &kp KP_N2    &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
             >;
 
             label = "WASD Shifted";
+        };
+
+        SC2 {
+            label = "Non WASD Shifted";
+            bindings = <
+&kp ESCAPE  &kp F2  &kp F3  &kp F4        &kp F5     &kp F6       &kp F7             &kp F8     &kp F9         &kp F10  &kp F11   &kp F12
+&kp GRAVE   &kp N1  &kp N2  &kp N3        &kp N4     &kp N5       &kp N6             &kp N7     &kp N8         &kp N9   &kp N0    &kp EQUAL
+&kp TAB     &kp Q   &kp W   &kp E         &kp R      &kp T        &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp LSHFT   &kp A   &kp S   &kp D         &kp F      &kp G        &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z   &kp X   &kp C         &kp V      &kp B        &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &kp BSLH
+                            &kp LEFT_ALT  &kp SPACE  &kp KP_N1    &backspace_delete  &kp ENTER  &kp RIGHT_ALT
+                            &kp KP_N4     &kp KP_N3  &kp KP_N2    &kp RIGHT_CONTROL  &mo 3      &Win_Or_Shift
+            >;
         };
 
         Movement {
@@ -75,7 +88,7 @@
 &trans           &trans          &trans            &trans        &trans        &trans          &trans        &trans            &trans              &trans      &trans             &trans
 &trans           &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &trans          &kp LEFT      &kp DOWN          &kp UP_ARROW        &kp RIGHT   &trans             &trans
 &trans           &trans          &trans            &trans        &trans        &trans          &kp HOME      &kp PAGE_DOWN     &kp PG_UP           &kp END     &trans             &trans
-                                                   &trans        &trans        &trans          &trans        &trans            &mo 4
+                                                   &trans        &trans        &trans          &trans        &trans            &mo 5
                                                    &trans        &trans        &trans          &trans        &trans            &kp K_CONTEXT_MENU
             >;
 
@@ -89,12 +102,12 @@
 &trans            &trans            &trans             &trans                &trans                 &trans       &trans  &kp NUMBER_7  &kp N8        &kp N9           &kp KP_PLUS   &trans
 &kp LEFT_SHIFT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6     &kp KP_PLUS   &trans
 &kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT       &trans
-                                                       &mo 4                 &trans                 &trans       &trans  &trans        &trans
+                                                       &mo 5                 &trans                 &trans       &trans  &trans        &trans
                                                        &kp K_CONTEXT_MENU    &trans                 &trans       &trans  &trans        &trans
             >;
         };
 
-        layer_3 {
+        meta_swap {
             bindings = <
 &trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
