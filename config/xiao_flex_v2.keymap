@@ -92,7 +92,7 @@
 &trans            &trans            &trans             &trans                &trans                 &trans       &trans  &kp NUMBER_7  &kp N8        &kp N9           &kp KP_PLUS   &trans
 &kp LEFT_SHIFT    &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6     &kp KP_PLUS   &trans
 &kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS    &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp DOT       &trans
-                                                       &mo 5                 &trans                 &trans       &trans  &trans        &trans
+                                                       &trans                &trans                 &trans       &trans  &trans        &trans
                                                        &kp K_CONTEXT_MENU    &trans                 &trans       &trans  &trans        &trans
             >;
         };
