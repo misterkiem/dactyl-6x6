@@ -4,3 +4,4 @@ zephyr/
 zmk/
 .west/
 build/
+/.vs
