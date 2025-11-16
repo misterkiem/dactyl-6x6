@@ -16,6 +16,8 @@
             #binding-cells = <0>;
             bindings = <&mkp MB5 &msc SCRL_UP>;
             label = "SWAP_UP";
+            wait-ms = <79>;
+            tap-ms = <5>;
         };
 
         swap_down: swap_down {
@@ -23,6 +25,8 @@
             #binding-cells = <0>;
             bindings = <&mkp MB5 &msc SCRL_DOWN>;
             label = "SWAP_DOWN";
+            wait-ms = <79>;
+            tap-ms = <5>;
         };
     };
 
