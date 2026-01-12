@@ -65,7 +65,7 @@
 &trans  &trans          &trans            &trans        &trans        &trans    &trans          &trans            &trans              &trans      &trans             &trans
 &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp LEFT_ALT  &trans    &kp LEFT        &kp DOWN          &kp UP_ARROW        &kp RIGHT   &trans             &trans
 &trans  &trans          &trans            &trans        &trans        &trans    &kp HOME        &kp PAGE_DOWN     &kp PG_UP           &kp END     &trans             &trans
-                                          &trans        &trans        &trans    &trans          &trans            &mo 5
+                                          &trans        &trans        &trans    &trans          &mo 5             &trans
                                           &trans        &trans        &trans    &trans          &trans            &kp K_CONTEXT_MENU
             >;
 
